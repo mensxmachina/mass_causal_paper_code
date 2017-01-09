@@ -4,7 +4,7 @@ if(length(args) == 0){
   ###############
   ### ADJUST ####
   ###############
-  config.file <- "configCytoEuler_inhibitor.R"
+  config.file <- "../scripts/configCytoEuler_inhibitor.R"
 }else{
   print(args)
   numberOfArgs <- length(args)
@@ -33,7 +33,6 @@ set.seed(myseed)
 
 combinationsInhAct <- expand.grid(allActs, allInhibitors)
 combinationsInhAct <- lapply(as.list(1:dim(combinationsInhAct)[1]), function(x) combinationsInhAct[x[1],])
-combinationsInhAct <- combinationsInhAct[1:2]
 
 results <-
     mclapply(combinationsInhAct, function(actInh){
@@ -48,10 +47,8 @@ results <-
                                         sep = "_"),
                           saveResultsPath = saveResultsPath,
                           verbose = TRUE,
-                          #removeActs = NULL,
                           keepActs = actInh$Var1,
                           removeVars = removeVars
-                          # keepVars = NULL,
           )
 
     },

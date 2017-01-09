@@ -6,7 +6,7 @@
 Install R packages `backShift`, `CompareCausalNetworks`, and `analyzeMC`. `backShift` and `CompareCausalNetworks` are available from [https://github.com/christinaheinze](). `analyzeMC` is provided in this submission. The latter can be installed as follows.
 
 ```
-install.packages("/PATH/TO/analyzeMC_0.1.tar.gz", type = "source", repos = NULL)
+install.packages("/PATH/TO/analyzeMC_0.1.1.tar.gz", type = "source", repos = NULL)
 ```
 
 ### 1) Create .rds files from .mat files
